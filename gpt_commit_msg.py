@@ -1,11 +1,8 @@
 import sys
 import os
-from dotenv import load_dotenv, find_dotenv
 import openai
 import tiktoken
 
-# Find and load the .env file from the project root
-# load_dotenv('.env')
 
 def num_tokens_from_string(string: str) -> int:
     """Returns the number of tokens in a text string."""
@@ -26,7 +23,6 @@ def generate_summary(code_chunks):
                         \n3. respond with [category] <commit message summarizing +/- changes> \
                         Constraint: Respond with the unpunctuated commit message related to the provided code change.\n"
         prompt = f"{chunk}\n<<END_DIFF>>\n\n"
-        
 
 
         # Count the tokens in the prompt
