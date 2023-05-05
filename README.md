@@ -17,8 +17,10 @@ fsmonitor-watchman.sample pre-merge-commit.sample   prepare-commit-msg.sample
 post-update.sample        pre-push.sample           push-to-checkout.sample
 </pre>
 
+To use a hook, rename the file without the `.sample` suffix.
 
+use `chmod +x <path to file>` to set the execute (x) permission on the perl file
 
 For a more in depth overview on Git Hooks, I reccomend [Atlassian's Tutorial](https://www.atlassian.com/git/tutorials/git-hooks)
 
-[Auto Commit Message](prepare-commit-msg.sh): Instruct GPT3.5 to review the modified code and summarize the changes. 
+[Auto Commit Message](hooks/prepare-commit-msg): Instruct GPT3.5 to review the modified code and summarize the changes. 
